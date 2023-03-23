@@ -84,5 +84,14 @@
   <ItemGroup>
     <None Include="Resources\Galaxie2-768.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background-ArbreAvecLune-EERVIER-Agency-16TypesDePersonnalités.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CielEtoilé3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
