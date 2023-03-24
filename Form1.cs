@@ -56,12 +56,13 @@ namespace EpervierAgencyCs_User
             {
                 if(Connecté)
                 {
-                   MySqlCommand cmd = new MySqlCommand("INSERT INTO user(nom,prenom,age,pays,ville) VALUES(@nom,@prenom,@age,@pays,@ville)", cn);
+                   MySqlCommand cmd = new MySqlCommand("INSERT INTO user(nom,prenom,age,pays,ville,intelligence) VALUES(@nom,@prenom,@age,@pays,@ville,@intelligence)", cn);
                     cmd.Parameters.AddWithValue("@nom", textBox1.Text);
                     cmd.Parameters.AddWithValue("@prenom", textBox2.Text);
                     cmd.Parameters.AddWithValue("@age", int.Parse(textBox3.Text));
                     cmd.Parameters.AddWithValue("@pays", textBox4.Text);
                     cmd.Parameters.AddWithValue("@ville", textBox5.Text);
+                    cmd.Parameters.AddWithValue("@intelligence", textBox6.Text);
                     cmd.ExecuteNonQuery();
                     cmd.Parameters.Clear();
                     MessageBox.Show("Ajouté.");
@@ -90,8 +91,9 @@ namespace EpervierAgencyCs_User
                         string Age = Lire["age"].ToString();
                         string Pays = Lire["pays"].ToString();
                         string Ville = Lire["ville"].ToString();
+                        string Intelligence = Lire["intelligence"].ToString();
 
-                        listView1.Items.Add(new ListViewItem(new[] { ID,Nom,Prenom,Age,Pays,Ville }));
+                        listView1.Items.Add(new ListViewItem(new[] { ID,Nom,Prenom,Age,Pays,Ville,Intelligence }));
                     }
                 }
             }
@@ -118,6 +120,16 @@ namespace EpervierAgencyCs_User
                     MessageBox.Show("Supprimé");
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

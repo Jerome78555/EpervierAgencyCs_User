@@ -56,6 +56,10 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -65,9 +69,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(453, 12);
+            this.button1.Location = new System.Drawing.Point(473, 17);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 28);
+            this.button1.Size = new System.Drawing.Size(142, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Se connecter";
             this.button1.UseVisualStyleBackColor = false;
@@ -76,6 +80,9 @@
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = global::EpervierAgencyCs_User.Properties.Resources.Galaxie2_768;
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox3);
@@ -89,7 +96,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(15, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(422, 164);
+            this.groupBox1.Size = new System.Drawing.Size(422, 191);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajouter";
@@ -182,7 +189,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(17, 182);
+            this.button2.Location = new System.Drawing.Point(17, 225);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(420, 28);
             this.button2.TabIndex = 2;
@@ -195,9 +202,9 @@
             this.groupBox2.BackgroundImage = global::EpervierAgencyCs_User.Properties.Resources.Galaxie2_768;
             this.groupBox2.Controls.Add(this.listView1);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(17, 221);
+            this.groupBox2.Location = new System.Drawing.Point(17, 259);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(598, 305);
+            this.groupBox2.Size = new System.Drawing.Size(598, 345);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Les utilisateurs";
@@ -212,7 +219,8 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader7});
             this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.ForeColor = System.Drawing.Color.GreenYellow;
             this.listView1.FullRowSelect = true;
@@ -220,7 +228,7 @@
             this.listView1.Location = new System.Drawing.Point(8, 19);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(575, 280);
+            this.listView1.Size = new System.Drawing.Size(575, 320);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -271,7 +279,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(453, 182);
+            this.button3.Location = new System.Drawing.Point(468, 225);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 28);
             this.button3.TabIndex = 4;
@@ -294,11 +302,44 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EpervierAgencyCs_User.Properties.Resources.pngegg;
-            this.pictureBox1.Location = new System.Drawing.Point(457, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(473, 75);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(142, 86);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(-185, -110);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "label6";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Intelligence";
+            this.columnHeader7.Width = 75;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(97, 155);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(85, 20);
+            this.textBox6.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label7.Location = new System.Drawing.Point(21, 155);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Intelligence";
             // 
             // Form1
             // 
@@ -306,7 +347,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::EpervierAgencyCs_User.Properties.Resources.Background_ArbreAvecLune_EERVIER_Agency_16TypesDePersonnalités;
-            this.ClientSize = new System.Drawing.Size(627, 538);
+            this.ClientSize = new System.Drawing.Size(659, 616);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox2);
@@ -355,6 +396,10 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }
 
