@@ -51,18 +51,34 @@ namespace EpervierAgencyCs_User
                 MessageBox.Show("Entrer un Nom de famille.");
             }else if(textBox2.Text == "")
             {
+                MessageBox.Show("Entrez un prénom.");
+            }else if(textBox3.Text == "")
+            {
                 MessageBox.Show("Entrez l'âge.");
-            }else
+            }else if(textBox4.Text == "")
+            {
+                MessageBox.Show("Entrez un pays.");
+            }else if(textBox5.Text == "")
+            {
+                MessageBox.Show("Entrez une ville.");
+            }else if(textBox6.Text == "")
+            {
+                MessageBox.Show("Entrez un type de personnalité en quatre lettres majuscules");
+            }else if(textBox7.Text == "")
+            {
+                MessageBox.Show("Entrez H ou F.");
+            }
             {
                 if(Connecté)
                 {
-                   MySqlCommand cmd = new MySqlCommand("INSERT INTO user(nom,prenom,age,pays,ville,intelligence) VALUES(@nom,@prenom,@age,@pays,@ville,@intelligence)", cn);
+                   MySqlCommand cmd = new MySqlCommand("INSERT INTO user(nom,prenom,age,pays,ville,intelligence,sexe) VALUES(@nom,@prenom,@age,@pays,@ville,@intelligence,@sexe)", cn);
                     cmd.Parameters.AddWithValue("@nom", textBox1.Text);
                     cmd.Parameters.AddWithValue("@prenom", textBox2.Text);
                     cmd.Parameters.AddWithValue("@age", int.Parse(textBox3.Text));
                     cmd.Parameters.AddWithValue("@pays", textBox4.Text);
                     cmd.Parameters.AddWithValue("@ville", textBox5.Text);
                     cmd.Parameters.AddWithValue("@intelligence", textBox6.Text);
+                    cmd.Parameters.AddWithValue("@sexe", textBox7.Text);
                     cmd.ExecuteNonQuery();
                     cmd.Parameters.Clear();
                     MessageBox.Show("Ajouté.");
@@ -92,8 +108,9 @@ namespace EpervierAgencyCs_User
                         string Pays = Lire["pays"].ToString();
                         string Ville = Lire["ville"].ToString();
                         string Intelligence = Lire["intelligence"].ToString();
+                        string Sexe = Lire["sexe"].ToString();
 
-                        listView1.Items.Add(new ListViewItem(new[] { ID,Nom,Prenom,Age,Pays,Ville,Intelligence }));
+                        listView1.Items.Add(new ListViewItem(new[] { ID,Nom,Prenom,Age,Pays,Ville,Intelligence,Sexe }));
                     }
                 }
             }
@@ -127,7 +144,23 @@ namespace EpervierAgencyCs_User
 
         }
 
+       
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }
